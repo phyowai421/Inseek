@@ -1,0 +1,11 @@
+
+workflows:
+  inseek-workflow:
+    name: Build Inseek App
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
